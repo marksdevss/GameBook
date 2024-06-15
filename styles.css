@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.filters {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.filters input, .filters select {
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.filters button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.games-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.game-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.game-card img {
+    max-width: 100%;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.game-card h2 {
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+.game-card p {
+    margin: 0;
+    color: #666;
+}
+
+
+.rating {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.rating span {
+    font-size: 24px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.rating span:hover {
+    color: #f39c12;
+    transition: color 0.3s ease;
+}
+
+.rating span.selected {
+    color: #f39c12;
+}
+
+.rating span.selected:hover,
+.rating span.selected ~ span {
+    color: #ccc;
+}
+
+/*media-querie */
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .game-card {
+        width: 100%;
+    }
+}
+
+/* Dispositivos móveis */
+@media (max-width: 480px) {
+    .filters {
+        display: block;
+    }
+
+    .filters input, .filters select, .filters button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
